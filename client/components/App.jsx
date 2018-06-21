@@ -31,7 +31,7 @@ class App extends React.Component {
         <br />
         <br />
 
-        <svg width="1000" height="1000">
+        <svg width="1000" height="700">
           {this.state.sqwagz.map((sqwag) => {
             return <Squag />
           })}
