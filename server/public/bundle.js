@@ -18304,7 +18304,7 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = {
-      sqwagz: []
+      sqwagz: [1]
     };
 
     return _this;
@@ -18320,6 +18320,11 @@ var App = function (_React$Component) {
           'h1',
           null,
           'Sqwaaaaagz'
+        ),
+        _react2.default.createElement(
+          'a',
+          { classlist: 'button' },
+          'Make Sqwag'
         ),
         _react2.default.createElement(
           'svg',
@@ -18371,7 +18376,10 @@ var Squag = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Squag.__proto__ || Object.getPrototypeOf(Squag)).call(this, props));
 
     _this.state = {
-      sqwagz: []
+      cx: 200,
+      cy: 0,
+      r: 15,
+      fill: 'orange'
     };
 
     return _this;
@@ -18383,18 +18391,7 @@ var Squag = function (_React$Component) {
       return _react2.default.createElement(
         _react2.default.Fragment,
         null,
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Sqwaaaaagz'
-        ),
-        _react2.default.createElement(
-          'svg',
-          null,
-          this.state.sqwagz.map(function (sqwag) {
-            return _react2.default.createElement(Squag, null);
-          })
-        )
+        _react2.default.createElement('circle', { cx: this.state.cx, cy: this.state.cy, r: this.state.r, fill: this.state.fill })
       );
     }
   }]);

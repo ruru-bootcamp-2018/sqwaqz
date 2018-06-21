@@ -7,7 +7,10 @@ class Squag extends React.Component {
       super (props)
   
       this.state = {
-        sqwagz: []
+        cx: 200,
+        cy: 0,
+        r: 15,
+        fill: 'orange'
       }
   
   
@@ -17,12 +20,7 @@ class Squag extends React.Component {
     render() {
       return (
         <React.Fragment>
-          <h1>Sqwaaaaagz</h1>
-          <svg>
-            {this.state.sqwagz.map((sqwag) => {
-              return <Squag />
-            })}
-          </svg>
+          <circle cx={this.state.cx} cy={this.state.cy} r={this.state.r} fill={this.state.fill} />
         </React.Fragment>
       )
     }

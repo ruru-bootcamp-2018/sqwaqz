@@ -8,7 +8,7 @@ class App extends React.Component {
     super (props)
 
     this.state = {
-      sqwagz: []
+      sqwagz: [1]
     }
 
   }
@@ -18,7 +18,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <h1>Sqwaaaaagz</h1>
-
+        <a classlist="button">Make Sqwag</a>
         <svg width="1000" height="1000">
           {this.state.sqwagz.map((sqwag) => {
             return <Squag />
