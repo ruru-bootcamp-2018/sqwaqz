@@ -17,11 +17,11 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className="hero is-primary has-text-centered">
+        <section className="hero is-info has-text-centered">
           <div className="hero-body">
             <div className="container">
               <h1 className="title is-centered">
-                Hero title
+                Make a squuuuuuuaq
               </h1>
             </div>
           </div>
