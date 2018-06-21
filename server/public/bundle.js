@@ -18317,15 +18317,29 @@ var App = function (_React$Component) {
         _react2.default.Fragment,
         null,
         _react2.default.createElement(
-          'h1',
-          null,
-          'Sqwaaaaagz'
+          'section',
+          { className: 'hero is-link' },
+          _react2.default.createElement(
+            'div',
+            { className: 'hero-body' },
+            _react2.default.createElement(
+              'div',
+              { className: 'container' },
+              _react2.default.createElement(
+                'h1',
+                { className: 'title is-centered' },
+                'Hero title'
+              )
+            )
+          )
         ),
         _react2.default.createElement(
-          'a',
-          { classlist: 'button' },
+          'button',
+          { className: 'button' },
           'Make Sqwag'
         ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'svg',
           { width: '1000', height: '1000' },
