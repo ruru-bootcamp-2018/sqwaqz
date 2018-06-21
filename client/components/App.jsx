@@ -5,7 +5,7 @@ import Squag from './Sqwag'
 
 class App extends React.Component {
   constructor(props) {
-    super (props)
+    super(props)
 
     this.state = {
       sqwagz: [1]
@@ -17,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className="hero is-link">
+        <section className="hero is-primary has-text-centered">
           <div className="hero-body">
             <div className="container">
               <h1 className="title is-centered">
@@ -27,9 +27,12 @@ class App extends React.Component {
           </div>
         </section>
 
-        <button className="button">Make Sqwag</button>
-        <br />
-        <br />
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <button className="button">Make Sqwag</button>
+          </div>
+        </div>
 
         <svg width="1000" height="700">
           {this.state.sqwagz.map((sqwag) => {

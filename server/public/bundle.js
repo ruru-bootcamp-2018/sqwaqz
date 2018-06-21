@@ -18318,7 +18318,7 @@ var App = function (_React$Component) {
         null,
         _react2.default.createElement(
           'section',
-          { className: 'hero is-link' },
+          { className: 'hero is-primary has-text-centered' },
           _react2.default.createElement(
             'div',
             { className: 'hero-body' },
@@ -18334,12 +18334,18 @@ var App = function (_React$Component) {
           )
         ),
         _react2.default.createElement(
-          'button',
-          { className: 'button' },
-          'Make Sqwag'
+          'div',
+          { 'class': 'columns' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'column has-text-centered' },
+            _react2.default.createElement(
+              'button',
+              { className: 'button' },
+              'Make Sqwag'
+            )
+          )
         ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'svg',
           { width: '1000', height: '700' },
