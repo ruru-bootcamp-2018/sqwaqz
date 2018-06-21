@@ -21,7 +21,7 @@ class App extends React.Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title is-centered">
-                Make a squuuuuuuaq
+                SQWAGZ
               </h1>
             </div>
           </div>
