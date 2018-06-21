@@ -18342,7 +18342,7 @@ var App = function (_React$Component) {
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'svg',
-          { width: '1000', height: '1000' },
+          { width: '1000', height: '700' },
           this.state.sqwagz.map(function (sqwag) {
             return _react2.default.createElement(_Sqwag2.default, null);
           })
@@ -18381,6 +18381,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var speedX = 2;
+var speedY = 5;
+
 var Squag = function (_React$Component) {
   _inherits(Squag, _React$Component);
 
@@ -18393,13 +18396,36 @@ var Squag = function (_React$Component) {
       cx: 200,
       cy: 0,
       r: 15,
-      fill: 'orange'
+      fill: 'orange',
+      move: _this.moveSquag.bind(_this)()
     };
 
     return _this;
   }
 
   _createClass(Squag, [{
+    key: 'moveSquag',
+    value: function moveSquag() {
+      var _this2 = this;
+
+      setInterval(function () {
+        var _state = _this2.state,
+            cx = _state.cx,
+            cy = _state.cy;
+        // moveX(cx)
+
+        _this2.moveY(cy);
+      }, 1000 / 30);
+    }
+  }, {
+    key: 'moveY',
+    value: function moveY(cy) {
+      var newY = cy + speedY;
+      this.setState({
+        cy: newY
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
