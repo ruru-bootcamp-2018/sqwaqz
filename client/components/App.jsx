@@ -62,11 +62,7 @@ class App extends React.Component {
 
         <div className="columns">
           <div className="column has-text-centered">
-<<<<<<< HEAD
             <button className="button" onClick={this.birthSqwags}>Deploy Sqwagz!</button>
-=======
-            <button className="button" onClick={this.birthSqwags}>Deploy the Squagz</button>
->>>>>>> 5e2459a25018ee5e010eb5c1a6b76c7f060df90f
           </div>
         </div>
 
