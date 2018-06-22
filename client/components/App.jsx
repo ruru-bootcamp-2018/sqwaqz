@@ -8,11 +8,27 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      sqwagz: [1]
+      sqwagz: []
     }
+
+    this.birthSqwags = this.birthSqwags.bind(this)
 
   }
 
+
+  birthSqwags () {
+    const sqwagSpawner = setInterval(() => {
+      let newSqwagz = this.state.sqwagz;
+      if (newSqwagz.length == 10) {
+        clearInterval(sqwagSpawner)
+      } else {
+        newSqwagz.push(1)
+        this.setState({
+          sqwagz: newSqwagz
+        })
+      }
+    }, 1000)
+  }
 
   render() {
     return (
@@ -28,9 +44,9 @@ class App extends React.Component {
         </section>
 
 
-        <div class="columns">
-          <div class="column has-text-centered">
-            <button className="button">Make Sqwag</button>
+        <div className="columns">
+          <div className="column has-text-centered">
+            <button className="button" onClick={this.birthSqwags}>Make Sqwag</button>
           </div>
         </div>
 
@@ -38,6 +54,8 @@ class App extends React.Component {
           {this.state.sqwagz.map((sqwag) => {
             return <Squag />
           })}
+
+
         </svg>
       </React.Fragment>
     )
