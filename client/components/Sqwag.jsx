@@ -56,7 +56,7 @@ class Squag extends React.Component {
     }
 
     checkCollision(cx, cy, r) {
-      if (cy >= 690 - r) { // check collision with floor
+      if (cy >= 590 - r) { // check collision with floor
         this.setState({
           speedY: 0,
           grounded: true

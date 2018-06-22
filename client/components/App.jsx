@@ -4,7 +4,7 @@ import Door from './Door'
 import Score from './Score'
 
 
-const doorLeft = 860;
+const doorLeft = 900;
 const doorWidth = 90;
 const doorHeight = 90;
 
@@ -60,16 +60,17 @@ class App extends React.Component {
         </div>
 
         <Score score={this.state.score}/>
-
-        <svg width="1000" height="700">
-        <Door doorLeft={doorLeft} doorWidth={doorWidth} doorHeight={doorHeight}/>
-          {this.state.sqwagz.map((sqwag) => {
-            return <Squag saved={this.saved} doorLeft={doorLeft} doorRight={doorLeft+doorWidth} doorTop={700-doorHeight}/>
-          })}
-
-
-
-        </svg>
+          <div className="has-text-centered">
+          <svg width="1200" height="600">
+            <g>
+              <image x='0' y='0' height='600' width='1200' xlinkHref="https://78.media.tumblr.com/8f75349b53791509c4dca46926c8946d/tumblr_mmxhrjIcvF1srot8so1_400.gif" />
+            </g>
+            <Door doorLeft={doorLeft} doorWidth={doorWidth} doorHeight={doorHeight}/>
+            {this.state.sqwagz.map((sqwag) => {
+              return <Squag saved={this.saved} doorLeft={doorLeft} doorRight={doorLeft+doorWidth} doorTop={600-doorHeight}/>
+            })}
+          </svg>
+        </div>
       </React.Fragment>
     )
   }
