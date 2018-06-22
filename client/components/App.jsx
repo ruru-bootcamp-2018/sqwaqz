@@ -56,6 +56,9 @@ class App extends React.Component {
           })}
 
 
+          <g>
+            <image x="100" y="0" height="20" width="20" xlinkHref="http://gifimage.net/wp-content/uploads/2018/04/lemmings-gif-9.gif" />
+          </g>
         </svg>
       </React.Fragment>
     )
