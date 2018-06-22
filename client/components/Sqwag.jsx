@@ -12,7 +12,8 @@ class Squag extends React.Component {
         speedX: 3,
         fill: 'orange',
         move: this.moveSquag.bind(this)(),
-        grounded: false
+        grounded: false,
+        isChilling: true
       }
 
       this. moveSquag = this.moveSquag.bind(this)
@@ -47,7 +48,7 @@ class Squag extends React.Component {
     }
 
     moveX (cx, speedX) {
-      console.log({cx},{speedX})
+      // console.log({cx},{speedX})
       let newX = cx+speedX
       this.setState({
         cx: newX
@@ -55,13 +56,20 @@ class Squag extends React.Component {
     }
 
     checkCollision(cx, cy, r) {
-      // check collision with floor
-      if (cy >= 690 - r) {
+      if (cy >= 690 - r) { // check collision with floor
         this.setState({
           speedY: 0,
           grounded: true
-        }) 
-      } 
+        })
+      }
+      if (cx >= this.props.doorLeft && cx <= this.props.doorRight) { // check collision with door
+        console.log("about to call saved")
+        if (this.state.isChilling) this.props.saved()
+        this.setState({
+          isChilling: false
+        })
+      }
+
     }
 
   
@@ -72,7 +80,7 @@ class Squag extends React.Component {
     render() {
       return (
         <React.Fragment>
-          <circle cx={this.state.cx} cy={this.state.cy} r={this.state.r} fill={this.state.fill} />
+         {this.state.isChilling && <circle cx={this.state.cx} cy={this.state.cy} r={this.state.r} fill={this.state.fill} />} 
         </React.Fragment>
       )
     }
