@@ -46,7 +46,7 @@ class App extends React.Component {
     this.setState({
       score: newScore
     })
-    
+
   }
 
   render() {
@@ -72,13 +72,13 @@ class App extends React.Component {
         <Score score={this.state.score}/>
 
         <svg width="1000" height="700">
+        <Door doorLeft={doorLeft} doorWidth={doorWidth} doorHeight={doorHeight}/>
           {this.state.sqwagz.map((sqwag) => {
             return <Squag saved={this.saved} doorLeft={doorLeft} doorRight={doorLeft+doorWidth} doorTop={700-doorHeight}/>
           })}
 
 
 
-          <Door doorLeft={doorLeft} doorWidth={doorWidth} doorHeight={doorHeight}/>
         </svg>
       </React.Fragment>
     )
