@@ -12,7 +12,7 @@ class Score extends React.Component {
     render() {
       return (
         <React.Fragment>
-            <h3 className="has-text-centered">Score: {this.props.score}</h3>
+            <h3 className="score has-text-centered">Score: {this.props.score}</h3>
         </React.Fragment>
       )
     }

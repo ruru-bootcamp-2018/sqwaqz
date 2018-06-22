@@ -55,12 +55,12 @@ class App extends React.Component {
 
         <div className="columns">
           <div className="column has-text-centered">
-            <button className="button" onClick={this.birthSqwags}>Make Sqwag</button>
+            <button className="button" onClick={this.birthSqwags}>Deploy Sqwagz!</button>
           </div>
         </div>
 
         <Score score={this.state.score}/>
-          <div className="has-text-centered">
+          <div className="pad has-text-centered">
           <svg width="1200" height="600">
             <g>
               <image x='0' y='0' height='600' width='1200' xlinkHref="https://78.media.tumblr.com/8f75349b53791509c4dca46926c8946d/tumblr_mmxhrjIcvF1srot8so1_400.gif" />
