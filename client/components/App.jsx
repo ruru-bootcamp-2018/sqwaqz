@@ -83,7 +83,7 @@ class App extends React.Component {
           </svg>
         </div>
       </React.Fragment>
-    )
+    ) 
   }
 }
 
