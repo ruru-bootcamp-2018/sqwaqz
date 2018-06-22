@@ -33,16 +33,6 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className="hero is-info has-text-centered">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title is-centered">
-                SQWAGZ
-              </h1>
-            </div>
-          </div>
-        </section>
-
 
         <div className="columns">
           <div className="column has-text-centered">
