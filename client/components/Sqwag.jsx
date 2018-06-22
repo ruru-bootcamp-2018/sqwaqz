@@ -8,12 +8,13 @@ class Squag extends React.Component {
         cx: 200,
         cy: 0,
         r: 15,
-        speedY: 5,
-        speedX: 3,
+        speedY: 8,
+        speedX: 6,
         fill: 'orange',
         move: this.moveSquag.bind(this)(),
         grounded: false,
-        isChilling: true
+        isAlive: true,
+        isMovingRight: false
       }
 
       this. moveSquag = this.moveSquag.bind(this)
@@ -56,17 +57,18 @@ class Squag extends React.Component {
     }
 
     checkCollision(cx, cy, r) {
-      if (cy >= 590 - r) { // check collision with floor
+      if (cy >= 540) { // check collision with floor
         this.setState({
           speedY: 0,
-          grounded: true
+          grounded: true,
+          isMovingRight: true
         })
       }
       if (cx >= this.props.doorLeft && cx <= this.props.doorRight) { // check collision with door
         console.log("about to call saved")
-        if (this.state.isChilling) this.props.saved()
+        if (this.state.isAlive) this.props.saved()
         this.setState({
-          isChilling: false
+          isAlive: false
         })
       }
 
@@ -80,10 +82,19 @@ class Squag extends React.Component {
     render() {
       return (
         <React.Fragment>
-         {this.state.isChilling && <circle cx={this.state.cx} cy={this.state.cy} r={this.state.r} fill={this.state.fill} />} 
+         {this.state.isAlive && !this.state.grounded &&
+          <g>
+            <image x={this.state.cx} y={this.state.cy} width={this.state.r*3} h={this.state.r*3} fill={this.state.fill} xlinkHref="StandStillRight.png" />
+          </g> 
+          || this.state.isAlive && this.state.isMovingRight && 
+          <g>
+            <image x={this.state.cx} y={this.state.cy} width={this.state.r*3} h={this.state.r*3} fill={this.state.fill} xlinkHref="RunRight.gif" />
+          </g>}
         </React.Fragment>
       )
     }
   }
 
   export default Squag
+
+   {/* <circle cx={this.state.cx} cy={this.state.cy} r={this.state.r} fill={this.state.fill} /> */}

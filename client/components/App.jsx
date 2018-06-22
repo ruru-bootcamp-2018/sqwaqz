@@ -27,6 +27,8 @@ class App extends React.Component {
 
 
   birthSqwags () {
+    let audio = new Audio('game.mp3');
+    audio.play();
     const sqwagSpawner = setInterval(() => {
       let newSqwagz = this.state.sqwagz;
       if (newSqwagz.length == 10) {
@@ -39,6 +41,11 @@ class App extends React.Component {
       }
     }, 1000)
   }
+
+  // componentDidMount() {
+  //   let audio = new Audio('game.mp3');
+  //   audio.play();
+  // }
 
   saved() {
     console.log("calling saved")
@@ -55,7 +62,7 @@ class App extends React.Component {
 
         <div className="columns">
           <div className="column has-text-centered">
-            <button className="button" onClick={this.birthSqwags}>Make Sqwag</button>
+            <button className="button" onClick={this.birthSqwags}>Deploy the Squagz</button>
           </div>
         </div>
 
